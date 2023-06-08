@@ -1,0 +1,26 @@
+# Copyright (c) 2023 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_JMPAX_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Jmpax_Keyboard"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_JMPAX_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "Jmpax_kb_R"
+	
+endif
+
+if SHIELD_JMPAX_LEFT || SHIELD_JMPAX_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

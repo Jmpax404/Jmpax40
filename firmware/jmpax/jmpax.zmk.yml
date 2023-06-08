@@ -1,0 +1,12 @@
+file_format: "1"
+id: jmpax
+name: Jmpax
+type: shield
+url: https://github.com/Jmpax404/Jmpax40
+requires: [nrfmicro]
+features:
+  - keys
+  - underglow
+siblings:
+  - jmpax_left
+  - jmpax_right

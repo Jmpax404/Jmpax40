@@ -1,0 +1,84 @@
+/*
+ * Copyright (c) 2023 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
+
+/ {
+    macros {
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+   &kp TAB  &kp Q         &kp W     &kp D  &kp F  &kp G      &kp Y  &kp U  &kp R     &kp L  &kp K  &kp BSPC
+ &kp LCTRL  &kp A         &kp S     &kp E  &kp T  &kp V      &kp P  &kp N  &kp I     &kp O  &kp H   &kp RET
+&kp LSHIFT                &kp Z     &kp X  &kp C                    &kp M  &kp B     &kp J  &mo 1     &mo 6
+                   &kp LEFT_ALT  &kp LWIN  &mo 4  &mo 2  &kp SPACE  &mo 3  &mo 5  &kp RWIN
+            >;
+        };
+
+        layer_1 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &kp HOME           &none           &kp UP        &kp INS  &kp DEL  &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &kp END  &kp LEFT_ARROW  &kp RIGHT_ARROW    &kp PAGE_UP    &none  &trans
+&trans          &trans  &trans  &trans                    &kp DOWN_ARROW            &none  &kp PAGE_DOWN   &trans  &trans
+                &trans  &trans  &trans  &trans    &trans          &trans           &trans         &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&kp ESC         &none         &none         &none         &kp GRAVE     &kp N5     &kp N6  &kp SEMICOLON  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
+ &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4  &kp MINUS  &kp EQUAL   &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9   &kp NUMBER_0  &trans
+ &trans                       &none         &none  &kp SINGLE_QUOTE                            &kp COMMA           &kp DOT          &kp SLASH         &trans  &trans
+                             &trans        &trans            &trans     &trans     &trans         &trans            &trans             &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9   &mo 5   &none  &kp K_APPLICATION  &kp KP_MINUS   &none   &none  &trans
+&trans  &none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6   &none   &none    &kp KP_NUMBER_0   &kp KP_PLUS   &none   &none  &trans
+&trans         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3                         &kp KP_DOT         &none   &none  &trans  &trans
+                        &trans           &trans           &trans  &trans  &trans             &trans        &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &none       &kp ENTER    &kp UP_ARROW    &kp BACKSPACE   &mo 5  &kp C_MUTE     &kp KP_NUMLOCK          &kp CAPSLOCK  &kp SCROLLLOCK  &kp PRINTSCREEN  &trans
+&trans  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &none       &none    &kp C_VOLUME_UP  &kp C_BRIGHTNESS_INC           &none  &kp PAUSE_BREAK  &trans
+&trans                  &none           &none            &none                      &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC           &none           &trans  &trans
+                       &trans          &trans           &trans  &trans      &trans             &trans                &trans          &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &kp F10  &kp F7  &kp F8  &kp F9   &trans   &none  &kp LS(LG(KP_NUMBER_7))  &kp LS(LG(KP_NUMBER_8))  &kp LS(LG(KP_NUMBER_9))   &none  &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp F12   &none  &kp LS(LG(KP_NUMBER_4))  &kp LS(LG(KP_NUMBER_5))  &kp LS(LG(KP_NUMBER_6))   &none  &trans
+&trans           &kp F1  &kp F2  &kp F3                   &kp LS(LG(KP_NUMBER_1))  &kp LS(LG(KP_NUMBER_2))  &kp LS(LG(KP_NUMBER_3))  &trans  &trans
+                 &trans  &trans  &trans   &trans  &trans                   &trans                   &trans                   &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &ext_power EP_OFF      &bl BL_CYCLE  &bl BL_DEC  &bl BL_INC  &bl BL_TOG  &trans
+&trans  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD         &bt BT_PRV  &ext_power EP_ON       &none       &none       &none  &trans
+&trans                             &none            &none            &none                                          &bt BT_SEL 0  &bt BT_NXT  &bt BT_CLR      &trans  &trans
+                                  &trans           &trans           &trans           &trans             &trans            &trans      &trans      &trans
+            >;
+        };
+    };
+};
