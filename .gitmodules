@@ -1,3 +1,0 @@
-[submodule "zmk-config"]
-	path = zmk-config
-	url = https://github.com/Jmpax404/zmk-config.git
