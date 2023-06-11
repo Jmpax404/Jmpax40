@@ -58,7 +58,7 @@
             bindings = <
 &trans  &none       &kp ENTER    &kp UP_ARROW    &kp BACKSPACE   &mo 5  &kp C_MUTE     &kp KP_NUMLOCK          &kp CAPSLOCK  &kp SCROLLLOCK  &kp PRINTSCREEN  &trans
 &trans  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &none       &none    &kp C_VOLUME_UP  &kp C_BRIGHTNESS_INC           &none  &kp PAUSE_BREAK  &trans
-&trans                  &none           &none            &none                      &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC           &none           &trans  &trans
+&trans                  &none           &none        &kp SPACE                      &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC           &none           &trans  &trans
                        &trans          &trans           &trans  &trans      &trans             &trans                &trans          &trans
             >;
         };
