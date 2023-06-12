@@ -1,4 +1,4 @@
-# Jmpax40 v1.0-pre
+# Jmpax40 v1.0
 
 Jmpax40 is a 40% wireless split keyboard.
 
